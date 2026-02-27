@@ -1,0 +1,28 @@
+<div id="<%= dom_id todo %>">
+  <div class="grid grid-cols-2 gap-2 text-sm">
+    <div>
+      <span class="font-semibold text-gray-600">Name:</span>
+      <span class="text-gray-800"><%= todo.name %></span>
+    </div>
+
+    <div>
+      <span class="font-semibold text-gray-600">Description:</span>
+      <span class="text-gray-800"><%= todo.description %></span>
+    </div>
+
+    <div>
+      <span class="font-semibold text-gray-600">Completed:</span>
+      <span class="<%= todo.completed ? 'text-green-600' : 'text-gray-500' %>"><%= todo.completed ? "Yes" : "No" %></span>
+    </div>
+
+    <div>
+      <span class="font-semibold text-gray-600">Priority:</span>
+      <span class="text-gray-800"><%= todo.priority %></span>
+    </div>
+
+    <div>
+      <span class="font-semibold text-gray-600">Project:</span>
+      <%= link_to todo.project.name, project_path(todo.project), class: "text-blue-600 hover:underline" %>
+    </div>
+  </div>
+</div>

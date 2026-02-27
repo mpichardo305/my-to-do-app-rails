@@ -1,0 +1,9 @@
+<div class="bg-white p-6 rounded shadow mb-6">
+  <%= render @todo %>
+</div>
+
+<div class="flex items-center gap-4">
+  <%= link_to "Edit this todo", edit_todo_path(@todo), class: "text-blue-600 hover:underline" %>
+  <%= link_to "Back to todos", todos_path, class: "text-blue-600 hover:underline" %>
+  <%= button_to "Destroy this todo", @todo, method: :delete, class: "bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700" %>
+</div>

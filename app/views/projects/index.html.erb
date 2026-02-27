@@ -1,0 +1,12 @@
+<div class="flex items-center justify-between mb-6">
+  <h1 class="text-2xl font-bold text-gray-800">Projects</h1>
+  <%= link_to "New project", new_project_path, class: "bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" %>
+</div>
+
+<ul class="space-y-2">
+  <% @projects.each do |project| %>
+    <li class="bg-white p-4 rounded shadow flex items-center justify-between">
+      <%= link_to project.name, project_path(project), class: "text-blue-600 hover:underline font-medium" %>
+    </li>
+  <% end %>
+</ul>
